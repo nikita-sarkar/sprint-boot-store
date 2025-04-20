@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StoreApplication {
 
 	public static void main(String[] args) {
+
+		OrderService orderService = new OrderService(new GooglePaymentService());
+		orderService.placeOrder();
 		SpringApplication.run(StoreApplication.class, args);
 	}
 
