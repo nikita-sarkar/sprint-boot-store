@@ -1,14 +1,16 @@
 package com.practice.store;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service("google")
-public class GooglePaymentService implements PaymentService {
+@Service("paypal")
+@Primary
+public class PaypalPaymentService implements PaymentService{
 
     @Override
     public void processPayment(double amount)
     {
-        System.out.println("GOOGLE PAY");
+        System.out.println("PAYPAL");
         System.out.println("Amount: " + amount);
     }
 }
