@@ -8,3 +8,6 @@ google:
 
 app:
   page-size: 10
+
+payment:
+  gateway: google

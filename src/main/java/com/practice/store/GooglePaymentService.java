@@ -3,7 +3,7 @@ package com.practice.store;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-@Service("google")
+//@Service("google")
 public class GooglePaymentService implements PaymentService {
 
     @Value("${google.apiUrl}")

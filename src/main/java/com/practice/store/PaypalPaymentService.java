@@ -3,7 +3,7 @@ package com.practice.store;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service("paypal")
+//@Service("paypal")
 @Primary
 public class PaypalPaymentService implements PaymentService{
 
