@@ -11,6 +11,10 @@ public class StoreApplication {
 		ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
 		var orderService = context.getBean(OrderService.class);
 		orderService.placeOrder();
+		System.out.println(orderService);
+		var orderService2 = context.getBean(OrderService.class);
+		orderService2.placeOrder();
+		System.out.println(orderService2);
 		var heavyResource = context.getBean(HeavyResource.class);
 	}
 
