@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: store
+
+google:
+  apiUrl: googlepay.com
+  supportedCurrencies: GBP,EUR,USD
+
+app:
+  page-size: 10
