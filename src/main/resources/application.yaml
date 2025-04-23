@@ -11,3 +11,7 @@ app:
 
 payment:
   gateway: google
+
+email:
+  host: gmail
+  port: 2020
