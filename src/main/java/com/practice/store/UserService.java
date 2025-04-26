@@ -1,5 +1,6 @@
 package com.practice.store;
 
+import com.practice.store.entities.User;
 import org.springframework.stereotype.Service;
 
 @Service
