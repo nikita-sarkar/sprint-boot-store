@@ -5,8 +5,6 @@ spring:
     url: jdbc:mysql://localhost:3306/spring-boot-store?createDatabaseIfNotExist=true
     username: root
     password: mysql
-  flyway:
-    repair: true
 
 google:
   apiUrl: googlepay.com
