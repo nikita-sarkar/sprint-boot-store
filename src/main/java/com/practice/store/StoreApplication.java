@@ -29,8 +29,11 @@ public class StoreApplication {
 //				.build();
 //
 //		user.setProfile(profile);
-		userService.persistRelated();
-		userService.demoFetch();
+//		userService.persistRelated();
+//		userService.demoFetch();
+
+		//userService.deleteRelated();
+		userService.setNewPassword("xyz");
 
 	}
 

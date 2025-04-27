@@ -6,7 +6,7 @@ import com.practice.store.repositories.UserRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
@@ -87,5 +87,19 @@ public class UserService {
     {
         User user = userRepository.findById(9L).orElseThrow(()->new RuntimeException("Could not find user"));
         System.out.println("User: "+user.getName()+ "\n"+ "Address: "+user.getAddresses());
+    }
+
+    @Transactional
+    public void deleteRelated() {
+        var user = userRepository.findById(9L).orElseThrow();
+        var address = user.getAddresses().get(0);
+        user.removeAddress(address);
+        userRepository.save(user);
+    }
+
+    @Transactional
+    public void setNewPassword(String newPassword)
+    {
+        userRepository.updatePassword(newPassword);
     }
 }
