@@ -19,21 +19,24 @@ public class StoreApplication {
 				.email("khushi@gmail.com")
 				.build();
 
-		var address = Address.builder()
-				.street("street")
-				.city("city")
-				.state("state")
-				.zip("zip")
-				.build();
+//		var address = Address.builder()
+//				.street("street")
+//				.city("city")
+//				.state("state")
+//				.zip("zip")
+//				.build();
+//
+//		user.addAddress(address);
+//		user.addTag("tag1");
+//
+//		var profile = Profile.builder()
+//				.bio("bio")
+//				.build();
+//
+//		user.setProfile(profile);
 
-		user.addAddress(address);
-		user.addTag("tag1");
+		userService.addUserToDB(user);
 
-		var profile = Profile.builder()
-				.bio("bio")
-				.build();
-
-		user.setProfile(profile);
 		System.out.println(user);
 	}
 
