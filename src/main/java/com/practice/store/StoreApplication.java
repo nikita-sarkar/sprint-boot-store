@@ -13,11 +13,6 @@ public class StoreApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
 		var userService = context.getBean(UserService.class);
-		var user = User.builder()
-				.name("Khushi")
-				.password("password")
-				.email("khushi@gmail.com")
-				.build();
 
 //		var address = Address.builder()
 //				.street("street")
@@ -34,10 +29,9 @@ public class StoreApplication {
 //				.build();
 //
 //		user.setProfile(profile);
+		userService.persistRelated();
+		userService.demoFetch();
 
-		userService.addUserToDB(user);
-
-		System.out.println(user);
 	}
 
 }

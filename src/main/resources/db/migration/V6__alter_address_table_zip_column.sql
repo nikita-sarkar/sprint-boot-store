@@ -1,0 +1,1 @@
+ALTER TABLE addresses CHANGE zipcode zip varchar(255) not null;
