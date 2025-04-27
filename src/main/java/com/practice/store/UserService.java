@@ -1,5 +1,6 @@
 package com.practice.store;
 
+import com.practice.store.dtos.UserNameDTO;
 import com.practice.store.entities.Address;
 import com.practice.store.entities.User;
 import com.practice.store.repositories.UserRepository;
@@ -8,6 +9,8 @@ import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @AllArgsConstructor
 @Service
@@ -101,5 +104,12 @@ public class UserService {
     public void setNewPassword(String newPassword)
     {
         userRepository.updatePassword(newPassword);
+    }
+
+    @Transactional
+    public void findByPassword(String newPassword)
+    {
+        List<UserNameDTO> userNameDTOList=  userRepository.findByPassword(newPassword);
+        userNameDTOList.forEach(userNameDTO -> System.out.println(userNameDTO));
     }
 }

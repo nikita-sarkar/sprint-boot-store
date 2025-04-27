@@ -33,7 +33,8 @@ public class StoreApplication {
 //		userService.demoFetch();
 
 		//userService.deleteRelated();
-		userService.setNewPassword("xyz");
+		//userService.setNewPassword("xyz");
+		userService.findByPassword("xyz");
 
 	}
 
